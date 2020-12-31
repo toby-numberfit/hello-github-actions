@@ -1,0 +1,13 @@
+name: A workflow for my Hello World file
+on: push # The event(s) which trigger this workflow
+
+# A job runs an action.
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Toby"
